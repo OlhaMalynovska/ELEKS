@@ -1,12 +1,6 @@
-/* Write a JavaScript function to get the last element of an 
-array */
-
-function getLast(a) {
-    return a[a.length - 1];
- }
- 
- let array = ["Mo","Tu","Wed","Th","Fr","Sa","Su"];
- console.log(getLast(array));
- 
- 
- 
+/*
+Write a simple JavaScript program to join all elements of the 
+following array into a string
+*/
+let array1 = [2,4,5,0];
+console.log(array1.join(" "));
