@@ -1,11 +1,11 @@
-/*1.Replicate code from slide 11, create instances of car and truck. Try to call
-different methods for both, investigate output using console.log(). */
+/*2. Add static method to one class, try to call it and investigate output. */
+
 
 class Vehicle {
     constructor(carModel, carYear, maxSpeed) {
         this.model = carModel;
         this.year = carYear;
-        this.maxSpeed =maxSpeed; 
+        this.maxSpeed = maxSpeed; 
     }
 
     displayInfo() {
@@ -21,40 +21,18 @@ class Car extends Vehicle {
         super(carModel, carYear, maxSpeed);
         this.type = "car";
     }
-
+    
     transportPeople() {
-        console.log(`Car ${this.model} starting transporting passengers`);
-    }
-}
-
-class Truck extends Vehicle {
-    constructor(carModel, carYear, maxSpeed) {
-        super(carModel, carYear, maxSpeed);
-        this.type = "truck";
+        console.log(`I am starting transporting passengers`);
     }
 
-    transportContainer() {
-        console.log(`Truck ${this.model} starting transporting heavy container`); 
+    static showInfo() {
+        console.log(`I am a static Car method!`)
     }
-
 }
 
 let car1 = new Car('Ford Fiesta', '2005', 190);
+car1.displayInfo();
 car1.transportPeople();
 
-let car2 = new Car('Renault Traffic', '2010', 180);
-car2.transportPeople();
-
-let car3 = new Car('BMW 005', '2011', 200);
-car3.transportPeople();
-
-let truck1 = new Truck('Mann', '2003', 120);
-truck1.transportContainer();
-
-let truck2 = new Truck('Mercedes', '2008', 140);
-truck2.transportContainer();
-
-let truck3 = new Truck('Volvo', '2003', 140);
-truck3.transportContainer();
-
-
+Car.showInfo();
