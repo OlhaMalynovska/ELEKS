@@ -6,5 +6,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {}
+  "scripts": {},
+  "type": "module"
 }

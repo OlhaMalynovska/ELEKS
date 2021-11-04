@@ -1,35 +1,7 @@
-/* Override method of father’s class. */
+/*Move classes to separate files and import them into the app using import/export. */
 
-class Vehicle {
-    constructor(carModel, carColour, carYear,  maxSpeed) {
-        this.model = carModel;
-        this.colour = carColour;
-        this.year = carYear;
-        this.maxSpeed = maxSpeed; 
-    }
-
-    displayInfo() {
-        console.log(`The ${this.colour} ${this.type} ${this.model} of ${this.year} with maximal speed ${this.maxSpeed} km/h;`);
-    }
-}
-
-class Car extends Vehicle {
-    constructor(carModel, carColour, carYear, maxSpeed) {
-        super(carModel, carColour, carYear, maxSpeed);
-        this.type = "car";
-    }
-
-    
-}
-
-class Truck extends Vehicle {
-    constructor(carModel, carColour, carYear, maxSpeed) {
-        super(carModel, carColour, carYear, maxSpeed);
-        this.type = "truck";
-    }
-
-   
-}
+import {Car} from './car.js';
+import {Truck} from './truck.js';
 
 let car1 = new Car('Ford Fiesta', 'red', '2005', '190');
 car1.displayInfo();
